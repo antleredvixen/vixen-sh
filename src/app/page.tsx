@@ -11,7 +11,7 @@ export default async function HomePage() {
   console.log(posts);
 
   return (
-    <main className="flex flex-wrap gap-4 min-h-[calc(100vh-60px)] bg-gradient-to-b from-[#ff00ff] to-[#ffccff] text-white">
+    <main className="flex flex-wrap p-4 gap-4 min-h-[calc(100vh-60px)] bg-gradient-to-b from-[#ff00ff] to-[#ffccff] text-white">
       {posts.map((post, index) => (
         <div key={post.id - index} className="flex w-48 flex-col">
           <img src={post.url} />
