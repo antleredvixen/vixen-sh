@@ -23,8 +23,11 @@ export default function RootLayout({
         <body className="w-full">
           <TopNav />
           {children}
+          <footer className="text-center mt-auto py-2 bg-[#ffccff] text-[#ff00ff]">
+            <p>&copy; 2024 antleredvixen. All rights reserved.</p>
+          </footer>
         </body>
       </html>
     </ClerkProvider>
-);
+  );
 }
