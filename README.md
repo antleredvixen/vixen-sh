@@ -6,9 +6,9 @@ vixen.sh is a personal blog and portfolio built with the T3 stack.
 
 - [X] Make it deploy (vercel)
 - [X] Scaffold basic ui with mock data
-- [ ] Tidy up build process
-- [ ] Actually set up a database (vercel postgres)
-- [ ] Attach database to UI
+- [X] Tidy up build process
+- [X] Actually set up a database (vercel postgres)
+- [X] Attach database to UI
 - [ ] Add authentication (w/ clerk)
 - [ ] Add image upload
 - [ ] Error management (w/ Sentry)
