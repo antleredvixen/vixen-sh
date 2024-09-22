@@ -11,12 +11,14 @@ export default async function HomePage() {
   console.log(posts);
 
   return (
-    <main className="flex flex-wrap p-4 gap-4 min-h-[calc(100vh-60px)] bg-gradient-to-b from-[#ff00ff] to-[#ffccff] text-white">
-      {posts.map((post, index) => (
-        <div key={post.id - index} className="flex w-48 flex-col">
-          <img src={post.url} />
-        </div>
-      ))}
+    <main className="p-4 min-h-[calc(100vh-60px)] bg-gradient-to-b from-[#ff00ff] to-[#ffccff] text-white">
+      <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 xl:columns-5 gap-4">
+        {posts.map((post) => (
+          <div key={post.id} className="mb-4 break-inside-avoid">
+            <img src={post.url} alt={`Post ${post.id}`} />
+          </div>
+        ))}
+      </div>
     </main>
   );
 }
