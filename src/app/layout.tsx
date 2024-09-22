@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 function TopNav() {
   return (
-    <nav className="flex w-full items-center justify-between border-b p-4 text-xl font-semibold">
+    <nav className="flex w-full items-center justify-between border-b border-[#e6b8e6] p-4 text-xl font-semibold bg-[#ffccff] text-[#ff00ff]">
       <div>vixen.sh</div>
 
       <div>sign in</div>
