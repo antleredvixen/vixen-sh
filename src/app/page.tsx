@@ -15,7 +15,6 @@ export default async function HomePage() {
       {posts.map((post, index) => (
         <div key={post.id - index} className="flex w-48 flex-col">
           <img src={post.url} />
-          <div>{post.name}</div>
         </div>
       ))}
     </main>
