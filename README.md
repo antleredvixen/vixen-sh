@@ -11,6 +11,7 @@ vixen.sh is a personal blog and portfolio built with the T3 stack.
 - [X] Attach database to UI
 - [X] Add authentication (w/ clerk)
 - [ ] Add image upload
+- [ ] "taint" (server-only)
 - [ ] Error management (w/ Sentry)
 - [ ] Routing/image page (parallel route)
 - [ ] Delete button (w/ Server Actions)
