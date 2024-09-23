@@ -2,7 +2,7 @@ import "~/styles/globals.css";
 import { GeistSans } from "geist/font/sans";
 import { type Metadata } from "next";
 import { TopNav } from "~/app/_components/topnav";
-import { Providers } from "./providers";
+import { Providers } from "~/app/providers";
 
 export const metadata: Metadata = {
   title: "vixen.sh",
