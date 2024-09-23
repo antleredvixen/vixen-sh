@@ -1,18 +1,31 @@
-import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
+'use client'
+
+import Link from "next/link";
+import { useSession, signIn, signOut } from "next-auth/react";
 
 export function TopNav() {
-    return (
-        <nav className="flex w-full items-center justify-between p-4 text-xl font-semibold bg-[#ff00ff] text-white">
-        <div>vixen.sh</div>
+	const { data: session, status } = useSession();
 
-        <SignedOut>
-            <SignInButton>
-                sign in
-            </SignInButton>
-        </SignedOut>
-        <SignedIn>
-            <UserButton />
-        </SignedIn>
-        </nav>
-    );
+	return (
+		<nav className="flex w-full items-center justify-between p-4 text-xl font-semibold bg-[#ff00ff] text-white">
+			<Link href="/">vixen.sh</Link>
+			<div>
+				{status === "loading" ? (
+					<span>Loading...</span>
+				) : session ? (
+					<button
+						onClick={() => signOut()}
+					>
+						sign out
+					</button>
+				) : (
+					<button
+						onClick={() => signIn()}
+					>
+						sign in
+					</button>
+				)}
+			</div>
+		</nav>
+	);
 }

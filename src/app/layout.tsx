@@ -1,10 +1,8 @@
-import { ClerkProvider } from '@clerk/nextjs'
 import "~/styles/globals.css";
-
 import { GeistSans } from "geist/font/sans";
 import { type Metadata } from "next";
-
 import { TopNav } from "~/app/_components/topnav";
+import { Providers } from "./providers";
 
 export const metadata: Metadata = {
   title: "vixen.sh",
@@ -18,16 +16,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <ClerkProvider>
-      <html lang="en" className={`${GeistSans.variable} flex flex-col gap-4`}>
-        <body className="w-full">
+    <html lang="en" className={`${GeistSans.variable} flex flex-col gap-4`}>
+      <body className="w-full">
+        <Providers>
           <TopNav />
           {children}
           <footer className="text-center mt-auto py-2 bg-[#ffccff] text-[#ff00ff]">
             <p>&copy; 2024 antleredvixen. All rights reserved.</p>
           </footer>
-        </body>
-      </html>
-    </ClerkProvider>
+        </Providers>
+      </body>
+    </html>
   );
 }
