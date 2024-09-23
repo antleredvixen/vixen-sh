@@ -11,7 +11,7 @@ export function TopNav() {
 			<Link href="/">vixen.sh</Link>
 			<div>
 				{status === "loading" ? (
-					<span>Loading...</span>
+					<span>sign in</span>
 				) : session ? (
 					<button
 						onClick={() => signOut()}
